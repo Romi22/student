@@ -1,0 +1,8 @@
+com\java\servlet\CheckServlet.class
+com\java\servlet\StudentServlet.class
+com\java\filter\IdFilter.class
+com\java\model\Student.class
+com\java\filter\ConverterFilter.class
+com\java\filter\NameFilter.class
+com\java\listener\Config.class
+com\java\servlet\PropertyReaderServlet.class

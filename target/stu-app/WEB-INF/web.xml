@@ -1,0 +1,88 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+  <display-name>Archetype Created Web Application</display-name>
+
+  <context-param>
+    <param-name>PROPERTY_FILE</param-name>
+    <param-value>C:\Users\romiakhtarkhan\VS CODES\STU\src\main\resources\config.properties</param-value>
+  </context-param>
+
+
+
+  <filter>
+    <filter-name>NameFilter</filter-name>
+    <filter-class>com.java.filter.NameFilter</filter-class>
+  </filter>
+
+ <filter>
+  <filter-name>IdFilter</filter-name>
+  <filter-class>com.java.filter.IdFilter</filter-class>
+</filter>
+
+  <filter>
+    <filter-name>ConverterFilter</filter-name>
+    <filter-class>com.java.filter.ConverterFilter</filter-class>
+  </filter>
+
+
+
+  <filter-mapping>
+    <filter-name>NameFilter</filter-name>
+    <url-pattern>/students</url-pattern>
+  </filter-mapping>
+
+  <filter-mapping>
+    <filter-name>IdFilter</filter-name>
+    <url-pattern>/students</url-pattern>
+  </filter-mapping>
+
+  <filter-mapping>
+    <filter-name>ConverterFilter</filter-name>
+    <url-pattern>/check</url-pattern>
+  </filter-mapping>
+
+
+  <listener>
+        <listener-class>com.java.listener.Config</listener-class>
+    </listener>
+
+
+  <servlet>
+    <servlet-name>StudentServlet</servlet-name>
+    <servlet-class>com.java.servlet.StudentServlet</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>CheckServlet</servlet-name>
+    <servlet-class>com.java.servlet.CheckServlet</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>PropertyReaderServlet</servlet-name>
+    <servlet-class>com.java.servlet.PropertyReaderServlet</servlet-class>
+  </servlet>
+
+
+  <servlet-mapping>
+    <servlet-name>StudentServlet</servlet-name>
+    <url-pattern>/students</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>CheckServlet</servlet-name>
+    <url-pattern>/check</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>PropertyReaderServlet</servlet-name>
+    <url-pattern>/property</url-pattern>
+  </servlet-mapping>
+
+</web-app>
+
+
+
+
